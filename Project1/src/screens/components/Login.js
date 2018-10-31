@@ -4,14 +4,21 @@ import {
   Text, 
   View,
   SafeAreaView,
-  TextInput,
-  Button,
  } from 'react-native';
 import { LinearGradient } from 'expo';
+import { CheckBox } from 'react-native-elements';
 import Form from './Form';
 import Footer from './Footer';
 
 class Login extends Component {
+
+    constructor(props) {
+        super();
+        this.state = {
+            rememberMe: false
+        }
+    }
+
   render() {
     return (
       <LinearGradient colors={['#523fd9', '#843893']} style={{flex: 1}}>
@@ -20,6 +27,15 @@ class Login extends Component {
                 <Text style={styles.titleText}>PROJECT</Text>
                 <Form/>
                 <Footer/>
+                <CheckBox
+                    title='Remember me'
+                    checked={this.state.rememberMe}
+                    containerStyle={styles.rememberBox}
+                    textStyle={{color:'#fff'}}
+                    checkedColor={'#fff'}
+                    uncheckedColor={'#fff'}
+                    onPress={() => this.setState({rememberMe: !this.state.rememberMe})}
+                />
             </View>
         </SafeAreaView>
       </LinearGradient>
@@ -37,8 +53,14 @@ const styles = StyleSheet.create({
         fontSize: 28,
         color: '#fff',
         fontWeight: 'bold',
-        margin: 60,
+        marginHorizontal: 60,
+        marginVertical: 40,
     },
+    rememberBox: {
+        marginTop: 50,
+        backgroundColor: "rgba(92, 99,216, 0)",
+        borderWidth: 0,
+    }
 });
 
 export default Login;

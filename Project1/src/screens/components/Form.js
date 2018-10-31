@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
       
     }, 
     buttonContainer: {
-        marginTop: 50,
+        marginTop: 40,
         backgroundColor: "rgba(92, 99,216, 0)",
         borderColor: "#fff",
         borderWidth: 2,
