@@ -21,6 +21,7 @@ class Form extends Component {
                     placeholder="Password"
                     selectionColor={'#fff'}
                     underlineColorAndroid={'#ddd'}
+                    secureTextEntry={true}
                 />
                 <Button 
                     title="SIGN IN"
