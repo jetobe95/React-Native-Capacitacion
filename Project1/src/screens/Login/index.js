@@ -26,7 +26,7 @@ class Login extends Component {
             <View >
                 <Text style={styles.titleText}>PROJECT</Text>
                 <Form/>
-                <Footer/>
+                <Footer {...this.props}/>
                 <CheckBox
                     title='Remember me'
                     checked={this.state.rememberMe}

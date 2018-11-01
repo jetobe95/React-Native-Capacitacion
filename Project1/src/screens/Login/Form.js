@@ -4,7 +4,7 @@ import {
     View,
     TextInput,
 } from 'react-native';
-import { Button } from 'react-native-elements';
+import Button from './../../components/button';
 
 class Form extends Component {
     render() {
@@ -24,11 +24,7 @@ class Form extends Component {
                     secureTextEntry={true}
                 />
                 <Button 
-                    title="SIGN IN"
-                    onPress = {() => {
-                        //continue
-                    }}
-                    buttonStyle={styles.buttonContainer}
+                    title='SIGN IN'
                 />
             </View>
         );

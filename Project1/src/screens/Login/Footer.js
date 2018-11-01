@@ -3,16 +3,20 @@ import {
   StyleSheet, 
   Text, 
   View,
- } from 'react-native';
+} from 'react-native';
 
 class Footer extends Component {
-  render() {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.signUpText}>Don't have an account yet?</Text>
-            <Text style={styles.signUpLink}>Sign Up</Text>
-        </View>
-    );
+    
+    handleSignUp = () => {
+        this.props.navigation.navigate('Register');
+    }
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.signUpText}>Don't have an account yet?</Text>
+                <Text style={styles.signUpLink} onPress={this.handleSignUp}>Sign Up</Text>
+            </View>
+        );
   }
 }
 
